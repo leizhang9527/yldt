@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:top="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="IE=8" http-equiv="X-UA-Compatible">
+    <meta name="description" content="医疗地图系统">
+    <meta name="keywords" content="医疗地图系统">
+    <title>医疗地图系统</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/base.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+    <!--首页大banner图js插件-->
+    <script type="text/javascript" src="./js/jquery.SuperSlide.2.1.2.js"></script>
+    <!--新闻中心左侧图片轮播插件-->
+    <script type="text/javascript" src="./js/2016indexImage.js"></script>
+    <!--首页js-->
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/skin.js"></script>
+    <script type="text/javascript" src="./js/nv.js"></script>
+</head>
+
+<body>
+
+
+<div class="header" id="container">
+    <!--头部第一部分开始-->
+    <div class="header_top">
+        <!--logo开始-->
+        <a class="header_logo fl" href="">
+            <img src="./images/logo.png" width="215" height="60">
+        </a>
+        <!--logo结束-->
+        <!--头部右部开始-->
+        <div class="header_right block" id="categort">
+            <div class="toplocation" style="padding-top: 15px;padding-left: 5px">
+                <img src="./images/icon/icon1.png" alt="" width="30" height="30" />
+                <span>
+							<b id="area_current">上海</b><i>[选择城市]</i>
+						</span>
+                <div id="hidden_menu" class="localselect popmore" style="display: block;">
+                    <div class="hot">
+                        热门：
+                        <a target="_self" href="http://yyk.39.net/guangzhou/">广州</a>
+                        <a target="_self" href="http://yyk.39.net/beijing/">北京</a>
+                        <a target="_self" href="http://yyk.39.net/shenzhen/">深圳</a>
+                        <a target="_self" href="http://yyk.39.net/hangzhou/">杭州</a>
+                    </div>
+                    <div class="localtab tab">
+                        <div class="tabnav" id="area_nav"><em class="current">省份</em><em class="">城市</em></div>
+                        <div class="tabcontent" id="area_list">
+                            <ul class="tabsingle" style="display: block;">
+                                <li><a target="_self" href="http://yyk.39.net/">全国</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;11&#39;,&#39;beijing&#39;,&#39;北京&#39;)">北京</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;12&#39;,&#39;tianjin&#39;,&#39;天津&#39;)">天津</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;13&#39;,&#39;hebei2&#39;,&#39;河北&#39;)">河北</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;14&#39;,&#39;shanxi&#39;,&#39;山西&#39;)">山西</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;15&#39;,&#39;nmgzzq&#39;,&#39;内蒙古&#39;)">内蒙古</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;21&#39;,&#39;liaoning&#39;,&#39;辽宁&#39;)">辽宁</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;22&#39;,&#39;jilin2&#39;,&#39;吉林&#39;)">吉林</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;23&#39;,&#39;heilongjiang&#39;,&#39;黑龙江&#39;)">黑龙江</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;31&#39;,&#39;shanghai&#39;,&#39;上海&#39;)">上海</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;32&#39;,&#39;jiangsu&#39;,&#39;江苏&#39;)">江苏</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;33&#39;,&#39;zhejiang&#39;,&#39;浙江&#39;)">浙江</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;34&#39;,&#39;anhui&#39;,&#39;安徽&#39;)">安徽</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;35&#39;,&#39;fujian&#39;,&#39;福建&#39;)">福建</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;36&#39;,&#39;jiangxi&#39;,&#39;江西&#39;)">江西</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;37&#39;,&#39;shandong&#39;,&#39;山东&#39;)">山东</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;41&#39;,&#39;henan&#39;,&#39;河南&#39;)">河南</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;42&#39;,&#39;hubei&#39;,&#39;湖北&#39;)">湖北</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;43&#39;,&#39;hunan&#39;,&#39;湖南&#39;)">湖南</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;44&#39;,&#39;guangdong&#39;,&#39;广东&#39;)">广东</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;45&#39;,&#39;gxzzzzq&#39;,&#39;广西&#39;)">广西</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;46&#39;,&#39;hainan2&#39;,&#39;海南&#39;)">海南</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;50&#39;,&#39;chongqing&#39;,&#39;重庆&#39;)">重庆</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;51&#39;,&#39;sichuan&#39;,&#39;四川&#39;)">四川</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;52&#39;,&#39;guizhou&#39;,&#39;贵州&#39;)">贵州</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;53&#39;,&#39;yunnan&#39;,&#39;云南&#39;)">云南</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;54&#39;,&#39;xzzzq&#39;,&#39;西藏&#39;)">西藏</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;61&#39;,&#39;shanxi2&#39;,&#39;陕西&#39;)">陕西</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;62&#39;,&#39;gansu&#39;,&#39;甘肃&#39;)">甘肃</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;63&#39;,&#39;qinghai&#39;,&#39;青海&#39;)">青海</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;64&#39;,&#39;nxhzzzq&#39;,&#39;宁夏&#39;)">宁夏</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;65&#39;,&#39;xjwwezzq&#39;,&#39;新疆&#39;)">新疆</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;71&#39;,&#39;taiwan&#39;,&#39;台湾&#39;)">台湾</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;81&#39;,&#39;xgtbxzq&#39;,&#39;香港&#39;)">香港</a></li>
+                                <li class=""><a target="_self" href="javascript:loadAreaInfo(&#39;82&#39;,&#39;amtbxzq&#39;,&#39;澳门&#39;)">澳门</a></li>
+                            </ul>
+
+                            <ul class="tabsingle" style="display: none;">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(function() {
+                        $(document).ready(function() {
+                            $("#hidden_menu").hide();
+                            $("#categort").mouseover(function() {
+                                $("#hidden_menu").show();
+                            });
+                            $("#hidden_menu").mouseout(function() {
+                                $(this).hide();
+                            });
+                        })
+                    });
+                </script>
+            </div>
+        </div>
+
+        <div class="header_left fl">
+            <div class="header_links">
+                <div class="ewb fr">
+                    <span></span>
+                    <a href=" " target="_blank">English</a>
+                    <a href=" " target="_blank" style=" margin-left:10px;">中文繁体</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="search">
+
+                <span class="fr"><a target="_blank" href=" ">帮助</a></span>
+                <div class="sea_r fr">
+                    <input class="srk" id="searchword" name="kw" type="text">
+                    <a class="sea_btn" href=" "></a>
+                </div>
+
+                <div class="sea_l fr">
+                    <label class="tzz_l"></label>
+                    <label class="tzz_r"></label>
+                    <a id="sea_vage" href="">全站检索<b></b></a>
+                    <ul class="sea_cage">
+                        <li><a href="">全站检索</a></li>
+                        <li><a href="">医院</a></li>
+                        <li><a href="">科室</a></li>
+                        <li><a href="">地区</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+        <!--微博微信开始-->
+        <div class="header_wbwx fr">
+            <div class="weimenhu"> 登陆</div>
+            <div class="weimenhu"> 注册</div>
+            <!--<div class="weixin_menu fr">
+                <img class="headerweibo" src="./images/wx.png" width="75" height="75">
+            </div>
+            <div class="gfwbwx fr">
+                <div class="weimenhu"> 官方微门户</div>
+                <div class="weibo"> <a href="" target="_blank">官方微博</a></div>
+                <div class="weixin"> 官方微信</div>
+            </div>-->
+        </div>
+        <!--头部右部开始-->
+    </div>
+    <!--头部第一部分结束-->
+    <!--头部导航开始-->
+    <div class="header_nav">
+        <div class="mainNav">
+            <ul>
+                <li> <a href="./index.html" target="_parent">首页</a> </li>
+                <li> <a href="./hostipal.html" target="_self" href=" ">医院</a></li>
+                <li> <a target="_blank" href=" ">科室</a></li>
+                <li> <a target="_self" href="">地区</a></li>
+                <li> <a target="_self" href="">帮助</a></li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+    <!--头部结束-->
+
+    <!--中间内容开始-->
+    <div class="content">
+        <!--轮播图开始-->
+        <div class="banner">
+            <div class="fullSlide">
+                <div class="bd">
+                    <div class="tempWrap" style="overflow: hidden; position: relative; width: auto;">
+                        <ul style="width: 3012px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -1004px;">
+                            <li class="clone" style="float: left; width: 1004px;">
+                                <a href="" target="_blank">
+                                    <img src="./images/public/banner.jpg">
+                                </a>
+                            </li>
+                            <li style="float: left; width: 1004px;">
+                                <a href="" target="_blank">
+                                    <img src="./images/public/banner.jpg">
+                                </a>
+                            </li>
+
+                            <li class="clone" style="float: left; width: 1004px;">
+                                <a href="" target="_blank">
+                                    <img src="./images/public/banner.jpg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="hd">
+                    <ul>
+                        <li class="on">1</li>
+                    </ul>
+                </div>
+                <a class="prev" href="javascript:void(0)">
+                </a>
+                <a class="next" href="javascript:void(0)">
+                </a>
+            </div>
+        </div>
+        <!--轮播图结束-->
+        <div class="ser_r wid_01">
+
+
+        </div>
+        <!--快速导航开始-->
+        <div class="xiweizhongxi clearfix">
+            <div class="xiweizhongxi_left fl block">
+                <h5 class="cloumn_title">
+							<span class="fl title_line">
+								快速导航
+							</span>
+                </h5>
+                <table width="96%" border="0" cellspacing="0" cellpadding="0" style="margin-top: 20px;margin-left: 20px;">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <span class="job">
+                                <select name="form-field-select-2" class="form-control" id="form-field-select-1" style="width:120px;">
+                                    <option value="">--地区--</option>
+                                    <option value="上海">上海</option>
+                                    <option value="江苏">江苏省</option>
+                                    <option value="河北">河北省</option>
+                                    <option value="山西">山西省</option>
+                                    <option value="四川">四川省</option>
+                                    <option value="河南">河南省</option>
+                                    <option value="辽宁">辽宁省</option>
+                                    <option value="吉林">吉林省</option>
+                                    <option value="黑龙江">黑龙江省</option>
+                                    <option value="山东">山东省</option>
+                                    <option value="安徽">安徽省</option>
+                                    <option value="福建">福建省</option>
+                                    <option value="湖北">湖北省</option>
+                                    <option value="湖南">湖南省</option>
+                                    <option value="海南">海南省</option>
+                                    <option value="江西">江西省</option>
+                                    <option value="贵州">贵州省</option>
+                                    <option value="云南">云南省</option>
+                                    <option value="陕西">陕西省</option>
+                                    <option value="甘肃">甘肃省</option>
+                                    <option value="广西">广西区</option>
+                                    <option value="宁夏">宁夏区</option>
+                                    <option value="青海">青海省</option>
+                                    <option value="新疆">新疆区</option>
+                                    <option value="西藏">西藏区</option>
+                                    <option value="内蒙古">内蒙古区</option>
+                                    <option value="香港">香港</option>
+                                    <option value="澳门">澳门</option>
+                                    <option value="台湾">台湾</option>
+                                    <option value="国外">国外</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td style="margin-right: 30px">
+                            <select name="form-field-select-" class="form-control" id="form-field-select-2" style="width:120px;">
+                                <option value="">--医院--</option>
+                                <option value="复旦大学附属华山医院">复旦大学附属华山医院</option>
+                                <option value="复旦大学附属中山医院">复旦大学附属中山医院</option>
+                                <option value="上海仁济医院">上海仁济医院</option>
+                                <option value="上海长海医院">上海长海医院</option>
+                                <option value="上海仁济医院">上海仁济医院</option>
+                                <option value="上海长海医院">上海长海医院</option>
+                                <option value="上海仁济医院">上海仁济医院</option>
+                                <option value="上海长海医院">上海长海医院</option>
+                                <option value="上海仁济医院">上海仁济医院</option>
+                                <option value="上海长海医院">上海长海医院</option>
+                            </select>
+                        </td>
+                        <td>
+                            <span class="job">
+                                <select name="form-field-select-" class="form-control" id="form-field-select-3" style="width:120px;">
+                                     <option value="">--科室--</option>
+                                     <option value="神经内科">神经内科</option>
+                                     <option value="感染病科">感染病科</option>
+                                     <option value="泌尿外科">泌尿外科</option>
+                                     <option value="内分泌科">内分泌科</option>
+                                     <option value="肝胆外科">肝胆外科</option>
+                                    <option value="神经内科">神经内科</option>
+                                     <option value="感染病科">感染病科</option>
+                                     <option value="泌尿外科">泌尿外科</option>
+                                     <option value="内分泌科">内分泌科</option>
+                                     <option value="肝胆外科">肝胆外科</option>
+                                </select>
+                            </span>
+                        </td>
+                        <td style=" padding-top:5px;"><a class="s4_btn" href="#" onclick="">开始搜索</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <span class="title_line"></span>
+            <!--右侧开始-->
+            <div class="focus-cnpc block">
+                <div class="zszb space">
+                    <div class="tab-head clearfix">
+                        <ul>
+                            <li id="ggtit3" class="undefined"><span class="f14 b">停诊公告</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-content0" style="display: block;">
+                            <div class="zszblist" id="tennews">
+                                <ul>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zszb space">
+                    <div class="tab-head clearfix">
+                        <ul>
+                            <li id="ggtit2" class="undefined"><span class="f14 b">医院咨询</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-content1" style="display: block;">
+                            <div class="zszblist" id="tennews1">
+                                <ul>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                    <li class="newlist">
+                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--右侧结束-->
+            <!--上海推荐医院-->
+            <div class="xiweizhongxi_left fl block">
+
+                <div id="tab_list" style="padding-top: 8px;">
+
+                    <table>
+                        <tr>
+                            <td class="title">
+                                上海推荐医院
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdr">
+                                <a href="">内科</a>
+                                <a href="">外科</a>
+                                <a href="">儿科</a>
+                                <a href="">妇产科</a>
+                                <a href="">皮肤科</a>
+                                <a href="">肿瘤科</a>
+                                <a href="">耳鼻喉科</a>
+                                <a href="">特色医院</a>
+                                <a href="">更多</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                                <div>
+                                    <ul>
+                                        <li class="block3 pmooc_navcon">
+                                            <dl>
+                                                <dt><img src="./images/hospital/13417030047684.jpg" width="140" height="110" /></dt>
+                                                <dd class="pmooc_navconchr1"><strong><a href="">上海交通大学附属瑞金医院</a></strong></dd>
+                                                <dd class="pmooc_navconchr2">
+                                                    <p>三级甲等 综合医院 国营</p>
+                                                </dd>
+                                                <dd class="pmooc_navconchr3">
+                                                    <p>电话：021-64370045(总机),021-64664140(预约)</p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="block3 pmooc_navcon">
+                                            <dl>
+                                                <dt><img src="./images/hospital/13417030047684.jpg" width="140" height="110" /></dt>
+                                                <dd class="pmooc_navconchr1"><strong><a href="">上海交通大学附属瑞金医院</a></strong></dd>
+                                                <dd class="pmooc_navconchr2">
+                                                    <p>三级甲等 综合医院 国营</p>
+                                                </dd>
+                                                <dd class="pmooc_navconchr3">
+                                                    <p>电话：021-64370045(总机),021-64664140(预约)</p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="block3 pmooc_navcon">
+                                            <dl>
+                                                <dt><img src="./images/hospital/13417030047684.jpg" width="140" height="110" /></dt>
+                                                <dd class="pmooc_navconchr1"><strong><a href="">上海交通大学附属瑞金医院</a></strong></dd>
+                                                <dd class="pmooc_navconchr2">
+                                                    <p>三级甲等 综合医院 国营</p>
+                                                </dd>
+                                                <dd class="pmooc_navconchr3">
+                                                    <p>电话：021-64370045(总机),021-64664140(预约)</p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="block3 pmooc_navcon">
+                                            <dl>
+                                                <dt><img src="./images/hospital/13417030047684.jpg" width="140" height="110" /></dt>
+                                                <dd class="pmooc_navconchr1"><strong><a href="">上海交通大学附属瑞金医院</a></strong></dd>
+                                                <dd class="pmooc_navconchr2">
+                                                    <p>三级甲等 综合医院 国营</p>
+                                                </dd>
+                                                <dd class="pmooc_navconchr3">
+                                                    <p>电话：021-64370045(总机),021-64664140(预约)</p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="block3 pmooc_navcon">
+                                            <dl>
+                                                <dt><img src="./images/hospital/13417030047684.jpg" width="140" height="110" /></dt>
+                                                <dd class="pmooc_navconchr1"><strong><a href="">上海交通大学附属瑞金医院</a></strong></dd>
+                                                <dd class="pmooc_navconchr2">
+                                                    <p>三级甲等 综合医院 国营</p>
+                                                </dd>
+                                                <dd class="pmooc_navconchr3">
+                                                    <p>电话：021-64370045(总机),021-64664140(预约)</p>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="padding-top: 20px">
+                        <span class="petr_hy_nall">上海长海医院</span>
+                        <span class="petr_hy_nall">上海长海医院</span>
+                        <span class="petr_hy_nall">上海长海医院</span>
+                        <span class="petr_hy_nall">上海长海医院</span>
+                        <span class="petr_hy_nall">上海长海医院</span>
+                        <span class="petr_hy_nall">上海长海医院</span>
+                        <span class="petr_hy_nall">上海长海医院</span>
+                        <span class="petr_hy_nall">上海长海医院</span>
+                        <span class="petr_hy_nall">上海长海医院</span>
+                        <span class="petr_hy_nall">上海长海医院</span>
+                        <span class="petr_hy_nall">上海儿童医学中心</span>
+                        <span class="petr_hy_nall">复旦大学附属妇产科医院</span>
+                        <span class="petr_hy_nall">上海中医药大学附属曙光医院</span>
+                        <span class="petr_hy_nall">上海中医药大学附属龙华医院</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--上海推荐医生-->
+            <div class="xiweizhongxi_left fl block">
+
+                <div id="tab_list1" style="padding-top: 8px;">
+
+                    <table>
+                        <tr>
+                            <td class="title">上海推荐医生</td>
+                        </tr>
+                        <tr>
+                            <td class="tdr">
+                                <a href="">内科</a>
+                                <a href="">外科</a>
+                                <a href="">儿科</a>
+                                <a href="">妇产科</a>
+                                <a href="">皮肤科</a>
+                                <a href="">肿瘤科</a>
+                                <a href="">耳鼻喉科</a>
+                                <a href="">特色医院</a>
+                                <a href="">更多</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <ul>
+                                        <li class="block2">
+                                            <a href="" style="color: #999;display: block;padding: 0 9px;">
+                                                <img src="./images/doctor/13418010607803.jpg" width="80px" height="80px" style="margin-top: 10px"><br>
+                                                <strong>陈胜良<b>主任医师</b></strong>
+                                                <p>上海仁济医院 消化内科</p>
+                                                <span>擅长：慢性胃炎、反流性疾病、慢性便秘和腹泻等相关疾病。。。</span>
+                                            </a>
+                                        </li>
+                                        <li class="block2">
+                                            <a href="" style="color: #999;display: block;padding: 0 9px;">
+                                                <img src="./images/doctor/13418010607803.jpg" width="80px" height="80px" style="margin-top: 10px"><br>
+                                                <strong>徐灵敏<b>主任医师</b></strong>
+                                                <p>复旦大学附属儿科医院 儿科。</p>
+                                                <span>擅长：新生儿及心血管疾病的临床研究，小儿感染性疾病。。。</span>
+                                            </a>
+                                        </li>
+                                        <li class="block2">
+                                            <a href="" style="color: #999;display: block;padding: 0 9px;">
+                                                <img src="./images/doctor/13418010607803.jpg" width="80px" height="80px" style="margin-top: 10px"><br>
+                                                <strong>朱文青<b>主任医师</b></strong>
+                                                <p>复旦大学附属中山医院 心。</p>
+                                                <span>擅长：心律失常，高血压病，心力衰竭，冠心病以及各种。。。</span>
+                                            </a>
+                                        </li>
+                                        <li class="block2">
+                                            <a href="" style="color: #999;display: block;padding: 0 9px;">
+                                                <img src="./images/doctor/13418010607803.jpg" width="80px" height="80px" style="margin-top: 10px"><br>
+                                                <strong>陈胜良<b>主任医师</b></strong>
+                                                <p>上海仁济医院 消化内科</p>
+                                                <span>擅长：慢性胃炎、反流性疾病、慢性便秘和腹泻等相关疾病。。。</span>
+                                            </a>
+                                        </li>
+                                        <li class="block2">
+                                            <a href="" style="color: #999;display: block;padding: 0 9px;">
+                                                <img src="./images/doctor/13418010607803.jpg" width="80px" height="80px" style="margin-top: 10px"><br>
+                                                <strong>徐灵敏<b>主任医师</b></strong>
+                                                <p>复旦大学附属儿科医院 儿科。</p>
+                                                <span>擅长：新生儿及心血管疾病的临床研究，小儿感染性疾病。。。</span>
+                                            </a>
+                                        </li>
+                                        <li class="block2">
+                                            <a href="" style="color: #999;display: block;padding: 0 9px;">
+                                                <img src="./images/doctor/13418010607803.jpg" width="80px" height="80px" style="margin-top: 10px"><br>
+                                                <strong>朱文青<b>主任医师</b></strong>
+                                                <p>复旦大学附属中山医院 心。</p>
+                                                <span>擅长：心律失常，高血压病，心力衰竭，冠心病以及各种。。。</span>
+                                            </a>
+                                        </li>
+                                        <li class="block2">
+                                            <a href="" style="color: #999;display: block;padding: 0 9px;">
+                                                <img src="./images/doctor/13418010607803.jpg" width="80px" height="80px" style="margin-top: 10px"><br>
+                                                <strong>徐灵敏<b>主任医师</b></strong>
+                                                <p>复旦大学附属儿科医院 儿科。</p>
+                                                <span>擅长：新生儿及心血管疾病的临床研究，小儿感染性疾病。。。</span>
+                                            </a>
+                                        </li>
+                                        <li class="block2">
+                                            <a href="" style="color: #999;display: block;padding: 0 9px;">
+                                                <img src="./images/doctor/13418010607803.jpg" width="80px" height="80px" style="margin-top: 10px"><br>
+                                                <strong>朱文青<b>主任医师</b></strong>
+                                                <p>复旦大学附属中山医院 心。</p>
+                                                <span>擅长：心律失常，高血压病，心力衰竭，冠心病以及各种。。。</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--公共底开始-->
+    <div class="bottom" id="footer-wrap">
+        <div class="bomcon">
+						<span class="bomfl fl">
+							<dl>
+								<dt><a target="_self" href="">关于我们</a></dt>
+								<dd><a target="_blank" href="">集团简介</a></dd>
+								<dd><a target="_blank" href="">组织机构</a></dd>
+								<dd><a target="_blank" href="">主营业务</a></dd>
+								<dd><a target="_blank" href="">企业文化</a></dd>
+							</dl>
+							<dl>
+								<dt><a target="_blank" href="">新闻中心</a></dt>
+								<dd><a target="_blank" href="">集团新闻</a></dd>
+								<dd><a target="_blank" href="">国资动态</a></dd>
+								<dd><a target="_blank" href="">高层动态</a></dd>
+								<dd><a target="_blank" href="">媒体聚焦</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="" target="_blank">相关下载</a></dt>
+								<dd><a href="" target="_blank">年度报告</a></dd>
+								<dd><a href="" target="_blank">社会责任报告</a></dd>
+								<dd><a href="" target="_blank">可持续发展报告</a></dd>
+								<dd><a href="" target="_blank">国别报告</a></dd>
+							</dl>
+							<dl style="padding-left:25px;">
+								<dt><a href="" target="_blank">帮助</a></dt>
+								<dd><a href="">网站地图</a></dd>
+								<dd><a href="">网站帮助</a></dd>
+								<dd><a href="">联系我们</a></dd>
+							</dl>
+							<div class="clear">
+
+							</div>
+						</span>
+        </div>
+
+        <div class="bomfot">
+            <p><span>© 2000-2020</span> XXXX有限公司 版权所有 | <a href="">法律声明</a></p>
+            <p>技术支持：XXXX有限公司 京ICP证：111111 | 京公网安备：1111111111</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
