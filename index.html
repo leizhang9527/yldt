@@ -20,6 +20,7 @@
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/skin.js"></script>
     <script type="text/javascript" src="./js/nv.js"></script>
+    <script type="text/javascript" src="./js/login.js"></script>
 </head>
 
 <body>
@@ -145,16 +146,64 @@
 
         <!--微博微信开始-->
         <div class="header_wbwx fr">
-            <div class="weimenhu"> 登陆</div>
+            <div class="weimenhu" onclick="showLogin()"> 登陆</div>
             <div class="weimenhu"> 注册</div>
-            <!--<div class="weixin_menu fr">
-                <img class="headerweibo" src="./images/wx.png" width="75" height="75">
+            <div class="theme-popover">
+                <div class="theme-poptit">
+                    <a href="javascript:;" title="关闭" class="close" onclick="hiddenLogin()">×</a>
+                    <h2>登录</h2>
+                </div>
+                <div class="theme-popbod dform">
+                    <div class="widget">
+                        <!-- 企业 -->
+                        <ol class="widget-list" id="managers">
+                            <li>
+                                <form class="theme-signin" name="loginform" action="" method="post">
+                                    <ol>
+                                        <li>
+                                            <strong>用户名：</strong>
+                                            <input class="ipt" type="text" id="exhibitor_name_login" name="log" value="" size="20"
+                                                   placeholder="请输入用户名" />
+                                        </li>
+                                        <li>
+                                            <strong>密码：</strong>
+                                            <input class="ipt" type="password" id="exhibitor_passwordm_login" name="pwd" value="" size="20"
+                                                   placeholder="请输入密码" />
+                                        </li>
+
+                                        <li>
+                                            <input class="btn btn-primary" type="button" onclick="torSubMit_login()" value=" 登 录 " />
+                                        </li>
+                                    </ol>
+                                </form>
+                            </li>
+                        </ol>
+                        <!-- 个人 -->
+                        <ol class="widget-list" id="designers">
+                            <li>
+                                <form class="theme-signin" name="loginform" action="" method="post">
+                                    <ol>
+                                        <li><strong>用户名：</strong>
+                                            <input class="ipt"  type="text"
+                                                   id="consumer_name_login" name="log" value="" size="20" placeholder="请输入用户名" /></li>
+                                        <li>
+                                            <strong>密码：</strong>
+                                            <input class="ipt" type="password" id="consumer_passwordm_login"
+                                                   name="pwd" value="" size="20" placeholder="请输入密码" />
+                                        </li>
+                                        <li><input class="btn btn-primary" type="button"  id="_login"
+                                                   onclick="merSubMit_login()"  value=" 登 录 " /></li>
+                                    </ol>
+                                </form>
+                            </li>
+                        </ol>
+                        <ul class="widget-tabs">
+                            <li class="widget-tab"><a href="#managers" class="widget-tab-link">企业会员</a></li>
+                            <li class="widget-tab"><a href="#designers" class="widget-tab-link">个人会员</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="gfwbwx fr">
-                <div class="weimenhu"> 官方微门户</div>
-                <div class="weibo"> <a href="" target="_blank">官方微博</a></div>
-                <div class="weixin"> 官方微信</div>
-            </div>-->
         </div>
         <!--头部右部开始-->
     </div>
