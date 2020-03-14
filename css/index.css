@@ -237,6 +237,39 @@ ul.pt15 {
 	font-size:12px;
 	padding-left: 10px;
 }
+.bgor {
+	background-color: #ff9a30;
+}
+.b {
+	font-weight: bold;
+}
+.f_r {
+	float: right;
+}
+.f14 {
+	font-size: 14px;
+}
+.white {
+	color: #fff;
+}
+.p_r_5 {
+	 padding-right: 5px;
+ }
+.nb {
+	font-weight: normal;
+}
+.f12 {
+	font-size: 12px;
+}
+.qyml{width:230px; float:left;margin-right:8px;position:relative;margin-left: 10px;}
+.qyml-top{width:210px;}
+.qyml-top-bt{width:220px;height:35px; line-height:35px;padding-left:10px;}
+.qyml-top-main{width: 212px;border:1px solid #d7c8c5;border-top:none;padding: 7px 0px 5px 15px;line-height:28px;overflow:hidden;}
+.qyml-top-main li{width:240px; list-style:none; line-height:24px; }
+.qyml-top-main li img{ vertical-align:middle; }
+.qyml-top-main li a{color:#555;}
+.qyml-top-main li a:hover{color:#f15b3c; text-decoration:underline;}
+.qyml-top-main li span{ width:208px; padding-left: 30px;}
 
 #tab1 {
 	background-color: #f9f9f9;
@@ -341,7 +374,6 @@ a.current:hover {
 	font-size: 16px;
 	font-weight: 700;
 	color: #1e9eb9;
-	line-height: 64px;
 	border-bottom: #f0f0f0 1px solid;
 	float: left;
 }
@@ -1491,3 +1523,61 @@ a.shiyoufy:hover {
 	color: #cc1301 !important;
 	font-weight: bold;
 }
+.hxan_box_rs{ position:absolute; right:10px; top:8px; background-color:#f3f5f6; border-radius:5px; width:310px; padding:0 10px; height:36px; line-height:36px;}
+.hxan_box_rs ul li{ position:relative;}
+.hxan_box_inpt{ border:none; background-color:transparent; line-height:27px; padding:0 8px; color:#8a8e99; font-size:12px; width:85%;}
+.hxan_box_founder{ position:absolute; top:10px; right:6px;
+	background:url(../images/pmooc_findbt.jpg) 0 0 no-repeat; width:18px; height:18px;
+	display:inline-block; cursor:pointer;}
+.train_stm_rccon{ border: 1px solid #e5e5e5; background-color: #fff; position:relative; overflow:hidden;}
+.pmooc_codecom_rc1s{border-bottom: 1px solid #e5e5e5; padding:15px 0; overflow:hidden; position:relative;}
+.pmooc_codecom_rc1stp{ font-size:16px; font-weight:normal; color:#315997; border-left:4px solid #315997; padding:4px 0;}
+.pmooc_codecom_rc1stpsp{ padding-left:10px;}
+.pmooc_codecom_rc1 dl{ padding:15px; overflow:hidden;}
+.pmooc_codecom_rc1 dl dt{ float:left; margin-right:10px;}
+.pmooc_codecom_char1{ font-size:14px; color:#333;}
+.pmooc_codecom_char2{ font-size:12px; color:#999; padding-top:10px;}
+.pmooc_codecom_rc2{ border: 1px solid #e5e5e5; background-color: #fff; position:relative; overflow:hidden; padding-bottom:15px;}
+.pmooc_codecom_rc2s{border-bottom: 1px solid #e5e5e5; padding:15px 0; overflow:hidden;}
+.pmooc_codecom_rc2s h2{ font-size:14px; font-weight:normal; border-left:4px solid #315997; padding:4px 0;}
+.pmooc_codecom_rc2s h2 font{ padding-left:10px;}
+.pmooc_codecom_rc2 dl{ padding:15px 15px 0 15px; overflow:hidden;}
+.pmooc_codecom_rc2 dl dt{ float:left; margin-right:10px;}
+.pmooc_codecom_rc2 ul{ padding:15px 15px 0 15px; overflow:hidden;}
+.pmooc_codecom_rc2 ul li{ font-size:14px; color:#333; text-align:center; line-height:20px;}
+.pmooc_codecom_rc2 ul li a{ color:#333;}
+.pmooc_codecom_rc2 ul li a:hover{ color:#315997;}
+
+.pmooc_codecom_rc3{ border: 1px solid #e5e5e5; background-color: #fff; position:relative; overflow:hidden; padding-bottom:10px;}
+.pmooc_codecom_rc3 ul{ padding:15px 0 0 15px; overflow:hidden; float:left;}
+.pmooc_codecom_rc3 ul li{ font-size:14px; color:#333; text-align:center; line-height:20px;}
+.pmooc_codecom_rc3 ul li a{ color:#333;}
+.pmooc_codecom_rc3 ul li a:hover{ color:#315997;}
+.hxan_box_rs{ position:absolute; right:10px; top:8px; background-color:#f3f5f6; border-radius:5px; width:310px; padding:0 10px; height:36px; line-height:36px;}
+.hxan_box_rs ul li{ position:relative;}
+.train_stm_rc1{ border: 1px solid #e5e5e5; background-color: #fff; position:relative; overflow:hidden; margin-bottom:15px;}
+.train_stm{ border-bottom:1px dashed #dedede; padding:10px 0px;}
+.train_stm dl{ padding:5px 15px; overflow:hidden;}
+.train_stm dl dt{ float:left; font-size:14px; color:#333;margin-top: 15px; font-weight:bold;}
+.train_stm dl dd{ float:left; font-size:14px; color:#333;}
+.train_stmfl{ padding:5px 10px; font-size:14px; color:#333; display:inline-block; cursor:pointer; margin-right:15px;}
+.train_stmfled{ padding:5px 10px; font-size:14px; color:#fff; background-color:#315997; display:inline-block; cursor:pointer; margin-right:15px;}
+.train_stms{ border-bottom:1px dashed #dedede; padding:10px 15px; overflow:hidden;}
+.train_stms_l{ float:left; font-size:14px; color:#333; padding-top:5px;}
+.train_stms_l font{ color:#315997;}
+.train_stms_r{ float:right; font-size:14px; color:#333;}
+.train_stms_rt{ color:#333; padding:5px 8px; font-size:14px; cursor:pointer; margin-left:15px; display:inline-block;}
+.train_stms_rted{ color:#fff; background-color:#315997; padding:5px 8px; font-size:14px; cursor:pointer; margin-left:15px; display:inline-block;}
+.train_stmcon{ padding:0px 0px 15px 15px; overflow:hidden;}
+.train_stmcon ul{ margin-top:15px; overflow:hidden;}
+.train_stmcon ul li{ float:left; border:1px solid #e5e5e5; margin-right:14px; display:inline; padding-bottom:10px;}
+.train_stmconbt a{ font-size:14px; color:#333; padding-top:8px; padding-left:10px; display:inline-block;}
+.train_stmconbt a:hover{ font-size:14px; color:#315997; padding-top:8px; padding-left:10px; display:inline-block;}
+.train_stmconcn a{ font-size:12px; color:#999; padding-top:8px; padding-left:10px; display:inline-block;}
+.train_stmconcn a:hover{ font-size:12px; color:#333; padding-top:8px; padding-left:10px; display:inline-block;}
+
+
+
+.petr_hy_nall1{ cursor:pointer; display:inline-block;  height:20px; line-height:20px; text-align:center; color:#333; font-size:12px; border:1px solid #ddd; background:#fff; margin-right:10px;margin-bottom: 10px}
+.petr_hy_nall1:hover{ cursor:pointer; display:inline-block;  height:20px; line-height:20px; text-align:center; color:#00a4ff; font-size:12px; border:1px solid #318add; background:#fff; margin-right:10px;;margin-bottom: 10px}
+

@@ -22,24 +22,9 @@
     <script type="text/javascript" src="./js/skin.js"></script>
     <script type="text/javascript" src="./js/nv.js"></script>
     <script type="text/javascript" src="./js/login.js"></script>
+    <script type="text/javascript" src="./js/register.js"></script>
     <style type="text/css">
-        .grid{
-            width:688px;
-            margin:0 auto;
-        }
-       .ui-ul{
-           height:auto;
-           padding-top: 50px;
-           white-space:nowrap;
-        }
-        .ui-ul li{
-            padding:15px;
-            float: left;
-            border:1px solid #ccc;
-            margin-right:26px;
-            margin-bottom: 10px;
-            display:inline;
-        }
+
     </style>
 
 </head>
@@ -165,7 +150,7 @@
         <!--微博微信开始-->
         <div class="header_wbwx fr">
             <div class="weimenhu" onclick="showLogin()"> 登陆</div>
-            <div class="weimenhu"> 注册</div>
+            <div class="weimenhu" onclick="goRegister()"> 注册</div>
             <div class="theme-popover">
                 <div class="theme-poptit">
                     <a href="javascript:;" title="关闭" class="close" onclick="hiddenLogin()">×</a>
@@ -242,536 +227,263 @@
     <!--中间内容开始-->
     <div class="main">
 
-        <div class="sectionbox">
-            <div class="tabs">
-                <span class="tips">按疾病找医生</span>
-                <input type="hidden" value="2/上海/all/不限" class="area-suffix">
-                <ul class="season-to-doctor-nav J_seasonNav" style="margin-left: 120px;">
-                    <li class="season-disease on" data-url=""
-                        data-type="season-disease" style="width: 98px;">
-                        <a>季节性疾病</a>
-                        <span></span>
-                    </li>
-                    <li data-type="neike" style="width: 56px;" class="">
-                        <a target="_blank" href="">内科</a>
-                        <span></span>
-                    </li>
-                    <li data-type="waike" style="width: 56px;" class="">
-                        <a target="_blank" href="">外科</a>
-                        <span></span>
-                    </li>
-                    <li data-type="fuchanke" style="width: 70px;" class="">
-                        <a target="_blank" href="">妇产科</a>
-                        <span></span>
-                    </li>
-                    <li data-type="pifuke" style="width: 70px;" class="">
-                        <a target="_blank" href="">皮肤科</a>
-                        <span></span>
-                    </li>
-                    <li data-type="guke" style="width: 56px;" class="">
-                        <a target="_blank" href="">骨科</a>
-                        <span></span>
-                    </li>
-                    <li data-type="wuguanke" style="width: 98px;" class="">
-                        <a target="_blank" href="">耳鼻咽喉科</a>
-                        <span></span>
-                    </li>
-                    <li data-type="erke" style="width: 56px;" class="">
-                        <a target="_blank" href="">儿科</a>
-                        <span></span>
-                    </li>
-                </ul>
-            </div>
-            <div class="season-container J_seasonContainer">
-                <ul class="season-disease" style="display: block;">
-                    <li>
-                        <a target="_blank" href="">上呼吸道感染</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="">流感</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="">肺炎</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="">哮喘</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="">支气管炎</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="">关节炎</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="">冠心病</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="">高血压</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="">肩周炎</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="">皮肤病</a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="">腮腺炎</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="sectionbox1">
-            <div class="tabs">
-                <span class="tip">按人群找医生</span>
-                <ul class="people-to-doctor-nav J_peopleNav">
-                    <li data-type="nvxing" class="" style="width: 56px;">
-                        <a>女性</a>
-                        <span></span>
-                    </li>
-                    <li data-type="nanxing" style="width: 56px;" class="">
-                        <a>男性</a>
-                        <span></span>
-                    </li>
-                    <li data-type="ertong" style="width: 56px;" class="">
-                        <a>儿童</a>
-                        <span></span>
-                    </li>
-                    <li data-type="yunchanfu" style="width: 70px;" class="">
-                        <a>孕产妇</a>
-                        <span></span>
-                    </li>
-                    <li data-type="yingyouer" style="width: 70px;" class="">
-                        <a>婴幼儿</a>
-                        <span></span>
-                    </li>
-                    <li data-type="zhonglaonian" style="width: 70px;" class="on">
-                        <a>中老年</a>
-                        <span></span>
-                    </li>
-                    <li data-type="shangbanzu" style="width: 70px;" class="">
-                        <a>上班族</a>
-                        <span></span>
-                    </li>
-                </ul>
-            </div>
-            <div class="people-container1 J_peopleContainer">
-                <ul class="zhonglaonian" style="display: block;">
-                    <li><a target="_blank" href="">白内障</a></li>
-                    <li><a target="_blank" href="">糖尿病</a></li>
-                    <li><a target="_blank" href="">老年痴呆</a></li>
-                    <li><a target="_blank" href="">骨质增生</a></li>
-                    <li><a target="_blank" href="">骨质疏松</a></li>
-                    <li><a target="_blank" href="">老年斑</a></li>
-                    <li><a target="_blank" href="">腰椎间盘突出</a></li>
-                    <li><a target="_blank" href="">疝气</a></li>
-                    <li><a target="_blank" href="">老花眼</a></li>
-                    <li><a target="_blank" href="">老年肠梗阻</a></li>
-                    <li><a target="_blank" href="">阿尔兹海默病</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="xiweizhongxi_left fl sectionbox2">
-            <div class="title-bar">
-                <h2>在线问诊</h2>
-                <span class="slogan">
-                    足不出户看医生（平台的问诊费由医生自行设定，平台不收取任何额外费用）
-                </span>
-            </div>
-            <div class="consult-bar">
-                <div class="consult-fm">
-                    <form class="J_FreeConsult" action="" method="get" target="_blank">
-                        <input class="consult-input" name="consultContent" type="text" maxlength="50"
-                               placeholder="在此输入您的问题，全科医生将为您提供免费的就医指导！">
-                        <span class="consult-txt" style="display: block;">
-
-                    </span>
-                        <button class="consult-btn" type="button">我要免费提问</button>
-                    </form>
-                </div>
-            </div>
-            <div class="consult-list J_ConsultList" data-tab-url="">
-                <div class="tabs">
-                    <ul class="g-clear J_Nav">
-                        <li data-id="11" class="on" style="width: 76px;"><a>妇产科</a></li>
-                        <li data-id="12" style="width: 62px;" class=""><a>儿科</a></li>
-                        <li data-id="13" style="width: 62px;" class=""><a>内科</a></li>
-                        <li data-id="14" style="width: 62px;" class=""><a>外科</a></li>
-                        <li data-id="15" style="width: 76px;" class=""><a>中医科</a></li>
-                        <li data-id="16" style="width: 76px;" class=""><a>皮肤科</a></li>
-                        <li data-id="17" style="width: 62px;" class=""><a>骨科</a></li>
-                        <li data-id="18" style="width: 132px;" class=""><a>耳鼻咽喉头颈科</a></li>
-                    </ul>
-                </div>
-                <div class="grid" >
-                    <ul class="ui-ul">
-                        <li >
-                            <div class="card-inner">
-                                <a class="doctor-avatar" href="javascript:;">
-                                    <img src="./images/keshi/138181403958522000.jpg" alt="赵杰"
-                                         title="赵杰" style="width:100px; height:100px; border-radius:50%; overflow:hidden;">
-                                    <i class="opened"></i>
-                                </a>
-
-                                <p class="doctor-name"><a href="javascript:;">赵杰</a><i>主任医师</i></p>
-                                <p>骨科</p>
-                                <p class="doctor-hospital">
-                                    <span class="g-txt-ell" title="上海交通大学医学院附属第九人民医院（黄浦院区）">上海交通大学医学院附属第九人...</span>
-                                    <span class="more-dot"></span>
-                                </p>
-                                <p class="doctor-consult">
-                                    <span class="star">评分
-                                        <em>9.9</em>
-                                    </span>
-                                    <span>问诊量 <i>1498</i></span>
-                                </p>
-
-                                <p class="doctor-good">擅长：
-                                    颈椎病、腰椎间盘突出症、腰椎滑脱症、椎管狭窄症、...
-                                </p>
-
-                                <div class="doctor-service">
-                                    <a class="infos image" href="" monitor="home,doctor,picask"
-                                       monitor-doctor-id="138181403958522000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-                                            <em>图文问诊</em>
-                                            <em class="price">￥100</em>
-                                        </span>
-                                    </a>
-                                    <a class="infos video" href="" monitor="ask,doctor,vpask"
-                                       monitor-doctor-id="138181403958522000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-                                            <em>视话问诊</em>
-                                            <em>暂无排班</em>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-inner">
-                                <a class="doctor-avatar" href="javascript:;">
-                                    <img src="./images/keshi/0df9230b-808a-46dd-bb36-6b25094ac514.jpg" alt="张成钢"
-                                         title="张成钢" style="width:100px; height:100px; border-radius:50%; overflow:hidden;">
-                                    <i class="opened"></i>
-                                </a>
-
-                                <p class="doctor-name"><a href="javascript:;">张成钢</a><i>副主任医师</i></p>
-                                <p>手外科</p>
-                                <p class="doctor-hospital">
-                                    <span class="g-txt-ell" title="复旦大学附属华山医院">复旦大学附属华山医院</span>
-                                    <span class="more-dot"></span>
-                                </p>
-                                <p class="doctor-consult">
-			<span class="star">评分
-				<em>9.2</em></span>
-                                    <span>问诊量 <i>57</i></span>
-                                </p>
-
-                                <p class="doctor-good">擅长：
-                                    手麻肌肉萎缩周围神经卡压性疾病（腕管综合征肘管综...
-                                </p>
-
-                                <div class="doctor-service">
-                                    <a class="infos image" href="" monitor="home,doctor,picask"
-                                       monitor-doctor-id="129256436305243000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>图文问诊</em>
-					<em class="price">
-						￥280</em>
-				</span>
-                                    </a>
-                                    <a class="infos video disabled" href="javascript:;">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>视话问诊</em>
-					<em>未开通</em>
-				</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-inner">
-                                <a class="doctor-avatar" href="javascript:;">
-                                    <img src="./images/keshi/138181403958522000.jpg" alt="赵杰"
-                                         title="赵杰" style="width:100px; height:100px; border-radius:50%; overflow:hidden;">
-                                    <i class="opened"></i>
-                                </a>
-
-                                <p class="doctor-name"><a href="javascript:;">赵杰</a><i>主任医师</i></p>
-                                <p>骨科</p>
-                                <p class="doctor-hospital">
-                                    <span class="g-txt-ell" title="上海交通大学医学院附属第九人民医院（黄浦院区）">上海交通大学医学院附属第九人...</span>
-                                    <span class="more-dot"></span>
-                                </p>
-                                <p class="doctor-consult">
-                                    <span class="star">评分
-                                        <em>9.9</em>
-                                    </span>
-                                    <span>问诊量 <i>1498</i></span>
-                                </p>
-
-                                <p class="doctor-good">擅长：
-                                    颈椎病、腰椎间盘突出症、腰椎滑脱症、椎管狭窄症、...
-                                </p>
-
-                                <div class="doctor-service">
-                                    <a class="infos image" href="" monitor="home,doctor,picask"
-                                       monitor-doctor-id="138181403958522000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-                                            <em>图文问诊</em>
-                                            <em class="price">￥100</em>
-                                        </span>
-                                    </a>
-                                    <a class="infos video" href="" monitor="ask,doctor,vpask"
-                                       monitor-doctor-id="138181403958522000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-                                            <em>视话问诊</em>
-                                            <em>暂无排班</em>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-inner">
-                                <a class="doctor-avatar" href="javascript:;">
-                                    <img src="./images/keshi/0df9230b-808a-46dd-bb36-6b25094ac514.jpg" alt="张成钢"
-                                         title="张成钢" style="width:100px; height:100px; border-radius:50%; overflow:hidden;">
-                                    <i class="opened"></i>
-                                </a>
-
-                                <p class="doctor-name"><a href="javascript:;">张成钢</a><i>副主任医师</i></p>
-                                <p>手外科</p>
-                                <p class="doctor-hospital">
-                                    <span class="g-txt-ell" title="复旦大学附属华山医院">复旦大学附属华山医院</span>
-                                    <span class="more-dot"></span>
-                                </p>
-                                <p class="doctor-consult">
-			<span class="star">评分
-				<em>9.2</em></span>
-                                    <span>问诊量 <i>57</i></span>
-                                </p>
-
-                                <p class="doctor-good">擅长：
-                                    手麻肌肉萎缩周围神经卡压性疾病（腕管综合征肘管综...
-                                </p>
-
-                                <div class="doctor-service">
-                                    <a class="infos image" href="" monitor="home,doctor,picask"
-                                       monitor-doctor-id="129256436305243000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>图文问诊</em>
-					<em class="price">
-						￥280</em>
-				</span>
-                                    </a>
-                                    <a class="infos video disabled" href="javascript:;">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>视话问诊</em>
-					<em>未开通</em>
-				</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                        <div class="card-inner">
-                            <a class="doctor-avatar" href="javascript:;">
-                                <img src="./images/keshi/138181403958522000.jpg" alt="赵杰"
-                                     title="赵杰" style="width:100px; height:100px; border-radius:50%; overflow:hidden;">
-                                <i class="opened"></i>
-                            </a>
-
-                            <p class="doctor-name"><a href="javascript:;">赵杰</a><i>主任医师</i></p>
-                            <p>骨科</p>
-                            <p class="doctor-hospital">
-                                <span class="g-txt-ell" title="上海交通大学医学院附属第九人民医院（黄浦院区）">上海交通大学医学院附属第九人...</span>
-                                <span class="more-dot"></span>
-                            </p>
-                            <p class="doctor-consult">
-                                    <span class="star">评分
-                                        <em>9.9</em>
-                                    </span>
-                                <span>问诊量 <i>1498</i></span>
-                            </p>
-
-                            <p class="doctor-good">擅长：
-                                颈椎病、腰椎间盘突出症、腰椎滑脱症、椎管狭窄症、...
-                            </p>
-
-                            <div class="doctor-service">
-                                <a class="infos image" href="" monitor="home,doctor,picask"
-                                   monitor-doctor-id="138181403958522000" target="_blank">
-                                    <i></i>
-                                    <span class="service-name">
-                                            <em>图文问诊</em>
-                                            <em class="price">￥100</em>
-                                        </span>
-                                </a>
-                                <a class="infos video" href="" monitor="ask,doctor,vpask"
-                                   monitor-doctor-id="138181403958522000" target="_blank">
-                                    <i></i>
-                                    <span class="service-name">
-                                            <em>视话问诊</em>
-                                            <em>暂无排班</em>
-                                        </span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                        <li>
-                            <div class="card-inner">
-                                <a class="doctor-avatar" href="javascript:;">
-                                    <img src="./images/keshi/0df9230b-808a-46dd-bb36-6b25094ac514.jpg" alt="张成钢"
-                                         title="张成钢" style="width:100px; height:100px; border-radius:50%; overflow:hidden;">
-                                    <i class="opened"></i>
-                                </a>
-
-                                <p class="doctor-name"><a href="javascript:;">张成钢</a><i>副主任医师</i></p>
-                                <p>手外科</p>
-                                <p class="doctor-hospital">
-                                    <span class="g-txt-ell" title="复旦大学附属华山医院">复旦大学附属华山医院</span>
-                                    <span class="more-dot"></span>
-                                </p>
-                                <p class="doctor-consult">
-			<span class="star">评分
-				<em>9.2</em></span>
-                                    <span>问诊量 <i>57</i></span>
-                                </p>
-
-                                <p class="doctor-good">擅长：
-                                    手麻肌肉萎缩周围神经卡压性疾病（腕管综合征肘管综...
-                                </p>
-
-                                <div class="doctor-service">
-                                    <a class="infos image" href="" monitor="home,doctor,picask"
-                                       monitor-doctor-id="129256436305243000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>图文问诊</em>
-					<em class="price">
-						￥280</em>
-				</span>
-                                    </a>
-                                    <a class="infos video disabled" href="javascript:;">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>视话问诊</em>
-					<em>未开通</em>
-				</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!--右侧开始-->
-        <div class="focus-cnpc fr block" style="margin-top: 20px;margin-bottom: 470px" >
-            <div class="zszb space">
-                <div class="tab-head clearfix">
-                    <ul>
-                        <li id="ggtit3" class="undefined"><span class="f14 b">停诊公告</span></li>
-                    </ul>
-                </div>
-                <div class="tab-content">
-                    <div id="tab-content0" style="display: block;">
-                        <div class="zszblist" id="tennews">
-                            <ul>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+        <!--医院列表-->
+        <div class="hostipalList">
+            <div class="petr_cpheader">
+                <!-- <dl>
+                     <span class="petr_more">共找到<span id="listCount">32</span>个医院</span>
+                     <dd>
+                         <span class="petr_begin" id="nextTypeName">当前位置：陕西-西安-所有医院</span>
+                     </dd>
+                 </dl>-->
+                <div class="pmooc_codecom_rc1s">
+                    <span class="pmooc_codecom_rc1stp"><font class="pmooc_codecom_rc1stpsp">当前位置：地区</font></span>
+                    <div class="hxan_box_rs">
+                        <ul>
+                            <li><span class="hxan_box_founder"></span><input name="" type="text" value="请输入关键词" class="hxan_box_inpt"></li>
+                        </ul>
                     </div>
                 </div>
+                <div class="train_stm">
+                    <dl>
+                        <dt>地区：</dt>
+                        <dd>
+                            <span class="train_stmfled">全部</span>
+                            <span class="train_stmfl">东城区</span>
+                            <span class="train_stmfl">西城区</span>
+                            <span class="train_stmfl">朝阳区</span>
+                            <span class="train_stmfl">丰台区</span>
+                            <span class="train_stmfl">海淀区</span>
+                            <span class="train_stmfl">石景山区</span>
+                            <span class="train_stmfl">门头沟区</span>
+
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>医院：</dt>
+                        <dd>
+                            <span class="train_stmfled">全部</span>
+                            <span class="train_stmfl">上海龙华医院</span>
+                            <span class="train_stmfl">上海远洋医院</span>
+                            <span class="train_stmfl">上海仁爱医院</span>
+                            <span class="train_stmfl">上海五官科医院</span>
+                            <span class="train_stmfl">上海市胸科医院</span>
+                            <span class="train_stmfl">上海远大心胸医院</span>
+
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>科室：</dt>
+                        <dd>
+                            <span class="train_stmfled">全部</span>
+                            <span class="train_stmfl">内科</span>
+                            <span class="train_stmfl">外科</span>
+                            <span class="train_stmfl">儿科</span>
+                            <span class="train_stmfl">妇产科</span>
+                            <span class="train_stmfl">皮肤科</span>
+                            <span class="train_stmfl">肿瘤科</span>
+                            <span class="train_stmfl">耳鼻喉科</span>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="train_stms">
+                    <span class="train_stms_l">共找到符合条件的医生<font>135</font>个</span>
+                </div>
+
             </div>
 
+            <div class="gylist-top block" style="display: block;">
+                <div class="petr_newcon_r" style="width:100%;text-align: center;">
+                    <ul class="petr_newcon_head" style="border-bottom: 2px solid #e5e5e5;height: 40px;line-height: 40px;position: relative;border-top: none;">
+                        <li style="float: left;">
+                            <span class="petr_naved" style="border-bottom: 2px solid #deb721;">医生列表</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gylist-top-main" id="ssjlist1">
+                    <ul class="gy_list">
+                        <li>
+                            <div class="col boxpic">
+                                <div class="pic">
+                                    <a href="" alt="医生姓名：陈开亮">
+                                        <img style="width:100px;height: 100px" src="./images/hospital/20484696.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col title">
+                                <h3>
+                                    <a href="">医生姓名：陈开亮</a>
+                                </h3>
+                                <h4>医生职称：副主任医师</h4>
+                                <h4>擅长治疗：高血压，心血管疾病</h4>
+                            </div>
+                            <div class="col1">
+                                <p class="buy">
+                                <div class="comment comment2 g-clear">
+                                    累计 <label class="g-hospital-item"
+                                              monitor="search_allpg_hosplist,search_allpg_hosplist,data">8.0万</label> 次问诊<div class="pd15">
+                                </div>
+                                    累计 <label class="g-hospital-item">2.0万</label> 条患者好评
+                                </div>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="gy_list">
+                        <li>
+                            <div class="col boxpic">
+                                <div class="pic">
+                                    <a href="" alt="医生姓名：陈开亮">
+                                        <img style="width:100px;height: 100px" src="./images/hospital/20484696.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col title">
+                                <h3>
+                                    <a href="">医生姓名：陈开亮</a>
+                                </h3>
+                                <h4>医生职称：副主任医师</h4>
+                                <h4>擅长治疗：高血压，心血管疾病</h4>
+                            </div>
+                            <div class="col1">
+                                <p class="buy">
+                                <div class="comment comment2 g-clear">
+                                    累计 <label class="g-hospital-item"
+                                              monitor="search_allpg_hosplist,search_allpg_hosplist,data">8.0万</label> 次问诊<div class="pd15">
+                                </div>
+                                    累计 <label class="g-hospital-item">2.0万</label> 条患者好评
+                                </div>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="gy_list">
+                        <li>
+                            <div class="col boxpic">
+                                <div class="pic">
+                                    <a href="" alt="医生姓名：陈开亮">
+                                        <img style="width:100px;height: 100px" src="./images/hospital/20484696.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col title">
+                                <h3>
+                                    <a href="">医生姓名：陈开亮</a>
+                                </h3>
+                                <h4>医生职称：副主任医师</h4>
+                                <h4>擅长治疗：高血压，心血管疾病</h4>
+                            </div>
+                            <div class="col1">
+                                <p class="buy">
+                                <div class="comment comment2 g-clear">
+                                    累计 <label class="g-hospital-item"
+                                              monitor="search_allpg_hosplist,search_allpg_hosplist,data">8.0万</label> 次问诊<div class="pd15">
+                                </div>
+                                    累计 <label class="g-hospital-item">2.0万</label> 条患者好评
+                                </div>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="gy_list">
+                        <li>
+                            <div class="col boxpic">
+                                <div class="pic">
+                                    <a href="" alt="医生姓名：陈开亮">
+                                        <img style="width:100px;height: 100px" src="./images/hospital/20484696.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col title">
+                                <h3>
+                                    <a href="">医生姓名：陈开亮</a>
+                                </h3>
+                                <h4>医生职称：副主任医师</h4>
+                                <h4>擅长治疗：高血压，心血管疾病</h4>
+                            </div>
+                            <div class="col1">
+                                <p class="buy">
+                                <div class="comment comment2 g-clear">
+                                    累计 <label class="g-hospital-item"
+                                              monitor="search_allpg_hosplist,search_allpg_hosplist,data">8.0万</label> 次问诊<div class="pd15">
+                                </div>
+                                    累计 <label class="g-hospital-item">2.0万</label> 条患者好评
+                                </div>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="gy_list">
+                        <li>
+                            <div class="col boxpic">
+                                <div class="pic">
+                                    <a href="" alt="医生姓名：陈开亮">
+                                        <img style="width:100px;height: 100px" src="./images/hospital/20484696.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col title">
+                                <h3>
+                                    <a href="">医生姓名：陈开亮</a>
+                                </h3>
+                                <h4>医生职称：副主任医师</h4>
+                                <h4>擅长治疗：高血压，心血管疾病</h4>
+                            </div>
+                            <div class="col1">
+                                <p class="buy">
+                                <div class="comment comment2 g-clear">
+                                    累计 <label class="g-hospital-item"
+                                              monitor="search_allpg_hosplist,search_allpg_hosplist,data">8.0万</label> 次问诊<div class="pd15">
+                                </div>
+                                    累计 <label class="g-hospital-item">2.0万</label> 条患者好评
+                                </div>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 分页 -->
+                <div class="page_model" id="page">
+                    <span class="total" id="totalsize">共7页</span>
+                    <span class="total" id="pageno">当前第1页</span>
+                    <ul class="pagination">
+                        <li class="first disabled" jp-role="first" jp-data="1">
+                            <a href="javascript:void(0);">首页</a>
+                        </li>
+                        <li class="prev disabled" jp-role="prev" jp-data="0">
+                            <a href="javascript:void(0);">上一页</a></li>
+                        <li class="page active" jp-role="page" jp-data="1">
+                            <a href="javascript:void(0);">1</a>
+                        </li><li class="page" jp-role="page" jp-data="2">
+                        <a href="javascript:void(0);">2</a>
+                    </li><li class="page" jp-role="page" jp-data="3">
+                        <a href="javascript:void(0);">3</a>
+                    </li>
+                        <li class="page" jp-role="page" jp-data="4">
+                            <a href="javascript:void(0);">4</a>
+                        </li>
+                        <li class="page" jp-role="page" jp-data="5">
+                            <a href="javascript:void(0);">5</a>
+                        </li>
+                        <li class="next" jp-role="next" jp-data="2">
+                            <a href="javascript:void(0);">下一页</a>
+                        </li>
+                        <li class="last" jp-role="last" jp-data="7">
+                            <a href="javascript:void(0);">末页</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 分页 -->
+            </div>
+        </div>
+
+
+        <!--右侧开始-->
+        <div class="focus-cnpc fr block" style="margin-top: 10px;margin-bottom: 270px" >
             <div class="zszb space">
                 <div class="tab-head clearfix">
                     <ul>
-                        <li id="ggtit2" class="undefined"><span class="f14 b">医院咨询</span></li>
+                        <li id="ggtit2" class="undefined"><span class="f14 b">医生动态</span></li>
                     </ul>
                 </div>
                 <div class="tab-content">

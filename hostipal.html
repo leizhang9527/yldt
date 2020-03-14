@@ -21,6 +21,7 @@
     <script type="text/javascript" src="./js/skin.js"></script>
     <script type="text/javascript" src="./js/nv.js"></script>
     <script type="text/javascript" src="./js/login.js"></script>
+    <script type="text/javascript" src="./js/register.js"></script>
 </head>
 
 <body>
@@ -147,7 +148,7 @@
         <!--微博微信开始-->
         <div class="header_wbwx fr">
             <div class="weimenhu" onclick="showLogin()"> 登陆</div>
-            <div class="weimenhu"> 注册</div>
+            <div class="weimenhu" onclick="goRegister()"> 注册</div>
             <div class="theme-popover">
                 <div class="theme-poptit">
                     <a href="javascript:;" title="关闭" class="close" onclick="hiddenLogin()">×</a>
@@ -207,6 +208,7 @@
         </div>
         <!--头部右部开始-->
     </div>
+
     <div class="header_nav">
         <div class="mainNav">
             <ul>
@@ -226,12 +228,61 @@
         <!--医院列表-->
         <div class="hostipalList">
             <div class="petr_cpheader">
-                <dl>
+               <!-- <dl>
                     <span class="petr_more">共找到<span id="listCount">32</span>个医院</span>
                     <dd>
                         <span class="petr_begin" id="nextTypeName">当前位置：陕西-西安-所有医院</span>
                     </dd>
-                </dl>
+                </dl>-->
+                <div class="pmooc_codecom_rc1s">
+                    <span class="pmooc_codecom_rc1stp"><font class="pmooc_codecom_rc1stpsp">当前位置：医院</font></span>
+                    <div class="hxan_box_rs">
+                        <ul>
+                            <li><span class="hxan_box_founder"></span><input name="" type="text" value="请输入关键词" class="hxan_box_inpt"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="train_stm">
+                    <dl>
+                        <dt>等级：</dt>
+                        <dd>
+                            <span class="train_stmfled">全部</span>
+                            <span class="train_stmfl">三级医院</span>
+                            <span class="train_stmfl">二级医院</span>
+                            <span class="train_stmfl">一级医院</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>地区：</dt>
+                        <dd>
+                            <span class="train_stmfled">全部</span>
+                            <span class="train_stmfl">东城区</span>
+                            <span class="train_stmfl">西城区</span>
+                            <span class="train_stmfl">朝阳区</span>
+                            <span class="train_stmfl">丰台区</span>
+                            <span class="train_stmfl">海淀区</span>
+                            <span class="train_stmfl">石景山区</span>
+                            <span class="train_stmfl">门头沟区</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>科室：</dt>
+                        <dd>
+                            <span class="train_stmfled">全部</span>
+                            <span class="train_stmfl">内科</span>
+                            <span class="train_stmfl">外科</span>
+                            <span class="train_stmfl">儿科</span>
+                            <span class="train_stmfl">妇产科</span>
+                            <span class="train_stmfl">皮肤科</span>
+                            <span class="train_stmfl">肿瘤科</span>
+                            <span class="train_stmfl">耳鼻喉科</span>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="train_stms">
+                    <span class="train_stms_l">共找到符合条件的医院<font>235</font>个</span>
+                </div>
+
             </div>
             <div class="gylist-top block" style="display: block;">
                 <div class="petr_newcon_r" style="width:100%;text-align: center;">

@@ -241,42 +241,137 @@
     <!--头部结束-->
 
     <!--中间内容开始-->
-    <div class="main" style="height: 1130px;margin-top: 20px;box-shadow: rgba(0,0,0,.2) 0 1px 3px 0;border-radius: 5px;">
-        <div class="content">
-            <!--通用-->
-            <div class="hd01 fwr" style="padding-top: 10px"><span>网站使用帮助</span></div>
-            <div class="help_01">
-                <h4 class="search_title">1、什么样的浏览器及界面分辨率可以满足浏览需求？</h4>
-                <p>本站建议使用IE7.0及以上浏览器，1024×768分辨率进行浏览。</p>
-            </div>
-            <div class="help_01">
-                <h4 class="search_title">2、如何检索本站的信息？</h4>
-                <p>您只需要在本站网页右上角的搜索框内输入关键词，并选择搜索范围（全站搜索、医院、科室或地区），点击“搜索”按钮，即可实现检索。获得更多检索帮助，请点击检索区域内的“帮助”按钮。</p>
-            </div>
-            <div class="help_01">
-                <h4 class="search_title">3、如何保存网页？</h4>
-                <p>您只需要在本站网页右上角的搜索框内输入关键词，并选择搜索范围（全站搜索、医院、科室或地区），点击“搜索”按钮，即可实现检索。获得更多检索帮助，请点击检索区域内的“帮助”按钮。</p>
-            </div>
-            <div class="help_01">
-                <h4 class="search_title">4、如何收藏当前网页？</h4>
-                <p>您只需要在网页浏览器中点击“收藏—添加到收藏夹”，可以修改网页的保存名称后，点击“确定”。本站提供收藏服务，每个页面上方“加入收藏”按钮可以将您正在浏览的页面保存进浏览器的收藏夹。</p>
-            </div>
-            <div class="help_01">
-                <h4 class="search_title">5、如何打印新闻正文？</h4>
-                <p> 本站新闻细览页面提供正文打印服务。进入新闻细览页面后，您可以点击正文标题右下方的“打印”按钮，打印新闻正文。</p>
-            </div>
-            <div class="help_01">
-                <h4 class="search_title">6、浏览网页时怎样调整字号的大小？</h4>
-                <p>本站新闻细览页面提供不同字号大小的新闻浏览方式。进入新闻细览页面后，您可以点击正文标题正下方的“字体：[大][中][小]”，对字体的浏览大小进行调整。</p>
-            </div>
-            <div class="help_01">
-                <h4 class="search_title">7、浏览时页面出现乱码如何处理？</h4>
-                <p>在浏览网页时如出现乱码，您可以检查浏览器的“编码”设置，确保选择“简体中文GB2312”。
-                </p>
-            </div>
-            <div class="help_01 lasthelp">
-                <h4 class="search_title">8、如何与我们联系？</h4>
-                <p> 您如果在浏览本站的过程中遇到问题或有任何建议，请打开网页左下方的“联系我们”页面，发送邮件给“网站支持：xxx@163.com”。</p>
+    <div class="main" style="height: 968px;margin-top: 20px;box-shadow: rgba(0,0,0,.2) 0 1px 3px 0;border-radius: 5px;">
+        <div id="section_content">
+            <div class="wrapper cf no-background pad20-1">
+                <div id="main_outer">
+                    <dl class="switchBox pad40 widget" id="switchBox">
+                        <dt>
+                            <span style="margin-left: 60px" onclick="showPersonal()" id="click1" class="on">个人会员注册</span>
+                            <span onclick="showProduct()" id="click2">企业会员注册</span>
+                        </dt>
+                        <dd class="widget-list" style="display: block">
+                            <div id="main" style="width: 720px">
+                                <form id="fileForm" enctype="multipart/form-data" method="post">
+                                    <div >
+                                        <ul class="self">
+                                            <li>
+                                                <label>头像：</label>
+                                                <input type='file' id='iconcls' name='consumer.iconcls'accept="image/gif,image/jpeg,image/jpg,image/png" />
+                                                <font style="color:red;font-size: 5px;">*仅支持JPG、BMP、PNG格式图片,尺寸小于100X100,大小小于10M</font>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                                <form action="" id="merSubmitF" method="POST" >
+                                    <div id="box">
+                                        <ul class="self">
+                                            <li><label>用户名：</label><input name="consumer.name"
+                                                                          id="consumer_name" type="text" value="请输入邮箱地址..." onblur="javascript:if(this.value=='')this.value='请输入邮箱地址...';"  onfocus="javascript:if(this.value=='请输入邮箱地址...')this.value='';">
+                                                <font color='red'>*</font></li>
+
+                                            <li><label>密码：</label><input type="password" name="consumer.passwordm"
+                                                                         id="consumer_passwordm" type="text"><font color='red'>*</font></li>
+                                            <li><label>确认密码：</label><input type="password" name="verifypassword"
+                                                                           id="consumer_verifypassword" type="text"><font color='red'>*</font></li>
+                                            <li><label>姓名：</label><input name="consumer.firstName"
+                                                                        id="consumer_firstName" type="text"><font color='red'>*</font></li>
+                                            <li ><label>性别：</label>
+                                                <label style="width:35px;height:20px">男：</label><input style="width:35px;height:20px" type="radio" checked="checked" name="consumer.gender" value="1" />
+                                                <label style="width:35px;height:20px" >女：</label><input style="width:35px;height:20px" type="radio" name="consumer.gender" value="2" />
+                                            </li>
+                                            <li><label>职称：</label><input  name="consumer.jobTitle"
+                                                                          id="consumer_jobTitle" type="text"><font color='red'>*</font></li>
+                                            <li><label>生日：</label><input  name="consumer.birthdate"
+                                                                          id="consumer_birthdate" type="text" class="Wdate" onFocus="WdatePicker({isShowClear:false,readOnly:true})"></li>
+                                            <li><label>手机：</label><input  name="consumer.mobilePhone"
+                                                                          id="consumer_mobilePhone" type="text"></li>
+                                            <li><label>电话：</label><input  name="consumer.telephone"
+                                                                          id="consumer_telephone" type="text"></li>
+                                            <li><label>QQ：</label><input  name="consumer.qq"
+                                                                          id="consumer_qq" type="text"></li>
+                                            <li><label>市区：</label>
+                                                <input  name="consumer.country" id="consumer_country" type="text" hidden="hidden"/>
+                                                <input  name="consumer.provinces" id="consumer_provinces" type="text" hidden="hidden"/>
+                                                <input  name="consumer.city" id="consumer_city" type="text"hidden="hidden" />
+                                                <select id="s1" ><option>国家</option></select>
+                                                <select id="s2" ><option>省份、州</option></select>
+                                                <select id="s3" ><option>地级市、县</option></select><font color='red'>*</font> </li>
+                                            <li><label>通讯地址：</label><input  name="consumer.mailingAddress"
+                                                                            id="consumer_mailingAddress" type="text"></li>
+                                            <li><label>邮编：</label><input  name="consumer.postalCode"
+                                                                          id="consumer_postalCode" type="text"></li>
+                                        </ul>
+                                        <p>
+                                            <input type="checkbox" id="chkComAgree1" checked="checked">我已阅读并接受《用户协议》
+                                        </p>
+                                        <div id="subbtn">
+                                            <p>
+                                                <a id="subMitId" class="btn btn-primary" onclick="merSubMit()">快速注册</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </dd>
+                        <!-- 企业会员注册 -->
+                        <dd class="widget-list1">
+                            <div id="main1" style="width: 720px">
+                                <form id="fileForm1" enctype="multipart/form-data" method="post">
+                                    <div >
+                                        <ul class="self">
+                                            <li>
+                                                <label>头像：</label>
+                                                <input type='file' id='iconcls2' name='consumer.iconcls'accept="image/gif,image/jpeg,image/jpg,image/png" />
+                                                <font style="color:red;font-size: 5px;">*仅支持JPG、BMP、PNG格式图片,尺寸小于100X100,大小小于10M</font>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                                <form action="" method="POST" id="torSubmitF" >
+                                    <div id="box1">
+                                        <ul class="self">
+                                            <li><label>用户名：</label> <input name="exhibitor.name"
+                                                                           id="exhibitor_name"value="请输入邮箱地址..." onblur="javascript:if(this.value=='')this.value='请输入邮箱地址...';"  onfocus="javascript:if(this.value=='请输入邮箱地址...')this.value='';" type="text">
+                                                <font color='red'>*</font></li>
+                                            <li class="clear"><label>密码：</label> <input value=""
+                                                                                        name="exhibitor.passwordm" id="exhibitor_passwordm"
+                                                                                        onBlur="this.className = '';ckpw(this.value);"
+                                                                                        onFocus="this.className = 'focus'" type="password">
+                                                <font color='red'>*</font></li>
+                                            <li><label>确认密码：</label> <input name="everifypass"
+                                                                            id="exhibitor_everifypass" onBlur="this.className = '';ckpw2();"
+                                                                            onFocus="this.className = 'focus'" type="password">
+                                                <font color='red'>*</font></li>
+                                            <li><label>企业名称：</label><input name="exhibitor.companyName"
+                                                                           id="exhibitor_companyName" type="text"><font color='red'>*</font></li>
+                                            <li><label>法人代表：</label><input name="exhibitor.funder"
+                                                                           id="exhibitor_funder" type="text"></li>
+                                            <li><label>联系人：</label><input name="exhibitor.primaryContact"
+                                                                          id="exhibitor_primaryContact" type="text"></li>
+                                            <li><label>地址：</label><input name="exhibitor.mailingAddress"
+                                                                         id="exhibitor_mailingAddress" type="text"></li>
+                                            <li><label>电话：</label><input name="exhibitor.phoneNumber" id="exhibitor_phoneNumber"
+                                                                         type="text"></li>
+                                            <li><label>传真：</label><input name="exhibitor.companyFaxNumber" id="exhibitor_companyFaxNumber"
+                                                                         type="text"></li>
+                                            <li><label>网址：</label><input name="exhibitor.companyWebAddress" id="exhibitor_companyWebAddress"
+                                                                         type="text"></li>
+                                            <li><label>邮政编码：</label><input name="exhibitor.postalCode" id="exhibitor_postalCode"
+                                                                           type="text"></li>
+                                        </ul>
+                                        <p>
+                                            <input type="checkbox" id="chkComAgree6" checked="checked">我已阅读并接受《用户协议》
+                                        </p>
+                                        <div id="subbtn">
+                                            <a class="btn btn-primary" onclick="torSubMit()">快速注册</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
             </div>
         </div>
     </div>

@@ -21,6 +21,7 @@
     <script type="text/javascript" src="./js/skin.js"></script>
     <script type="text/javascript" src="./js/nv.js"></script>
     <script type="text/javascript" src="./js/login.js"></script>
+    <script type="text/javascript" src="./js/register.js"></script>
 </head>
 
 <body>
@@ -147,7 +148,7 @@
         <!--微博微信开始-->
         <div class="header_wbwx fr">
             <div class="weimenhu" onclick="showLogin()"> 登陆</div>
-            <div class="weimenhu"> 注册</div>
+            <div class="weimenhu" onclick="goRegister()"> 注册</div>
             <div class="theme-popover">
                 <div class="theme-poptit">
                     <a href="javascript:;" title="关闭" class="close" onclick="hiddenLogin()">×</a>
@@ -339,7 +340,7 @@
                                      <option value="泌尿外科">泌尿外科</option>
                                      <option value="内分泌科">内分泌科</option>
                                      <option value="肝胆外科">肝胆外科</option>
-                                    <option value="神经内科">神经内科</option>
+                                     <option value="神经内科">神经内科</option>
                                      <option value="感染病科">感染病科</option>
                                      <option value="泌尿外科">泌尿外科</option>
                                      <option value="内分泌科">内分泌科</option>
@@ -355,123 +356,58 @@
             <span class="title_line"></span>
             <!--右侧开始-->
             <div class="focus-cnpc block">
-                <div class="zszb space">
-                    <div class="tab-head clearfix">
-                        <ul>
-                            <li id="ggtit3" class="undefined"><span class="f14 b">停诊公告</span></li>
-                        </ul>
-                    </div>
-                    <div class="tab-content">
-                        <div id="tab-content0" style="display: block;">
-                            <div class="zszblist" id="tennews">
-                                <ul>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                <div class="qyml" style="margin-top: 20px">
+                    <div class="qyml-top">
+                        <div class="qyml-top-bt b bgor f14 white">
+                            热门医院
+                            <span class="f_r"><a href="./keshi.html" class="white f12 nb p_r_5">more&gt;&gt;</a></span>
+                        </div>
+                        <div class="qyml-top-main" id="ssjlist2">
+                            <span class="petr_hy_nall1">上海龙华医院</span>
+                            <span class="petr_hy_nall1">上海远洋医院</span>
+                            <span class="petr_hy_nall1">上海仁爱医院</span>
+                            <span class="petr_hy_nall1">上海五官科医院</span>
+                            <span class="petr_hy_nall1">上海市胸科医院</span>
+                            <span class="petr_hy_nall1">上海远大心胸医院</span>
+                            <span class="petr_hy_nall1">上海市精神卫生中心</span>
+                            <span class="petr_hy_nall1">上海市第八人民医院</span>
+                            <span class="petr_hy_nall1">中国人民解放军第八五医院</span>
                         </div>
                     </div>
                 </div>
+                <div class="qyml" style="margin-top: 20px">
+                    <div class="qyml-top">
+                        <div class="qyml-top-bt b bgor f14 white">
+                            常见科室
+                            <span class="f_r"><a href="./keshi.html" class="white f12 nb p_r_5">more&gt;&gt;</a></span>
+                        </div>
+                        <div class="qyml-top-main" id="ssjlist1">
+                            <span class="petr_hy_nall1">神经内科</span>
+                            <span class="petr_hy_nall1">感染病科</span>
+                            <span class="petr_hy_nall1">泌尿外科</span>
+                            <span class="petr_hy_nall1">内分泌科</span>
+                            <span class="petr_hy_nall1">肝胆外科</span>
+                            <span class="petr_hy_nall1">神经内科</span>
+                            <span class="petr_hy_nall1">感染病科</span>
+                            <span class="petr_hy_nall1">泌尿外科</span>
+                            <span class="petr_hy_nall1">内分泌科</span>
+                            <span class="petr_hy_nall1">肝胆外科</span>
+                            <span class="petr_hy_nall1">内分泌科</span>
+                            <span class="petr_hy_nall1">肝胆外科</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="zszb space">
                     <div class="tab-head clearfix">
                         <ul>
-                            <li id="ggtit2" class="undefined"><span class="f14 b">医院咨询</span></li>
+                            <li id="ggtit2" class="undefined"><span class="f14 b">热点咨询</span></li>
                         </ul>
                     </div>
                     <div class="tab-content">
                         <div id="tab-content1" style="display: block;">
                             <div class="zszblist" id="tennews1">
                                 <ul>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
-                                    <li class="newlist">
-                                        <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                        </a>
-                                    </li>
                                     <li class="newlist">
                                         <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
                                         </a>
@@ -536,7 +472,6 @@
             <div class="xiweizhongxi_left fl block">
 
                 <div id="tab_list" style="padding-top: 8px;">
-
                     <table>
                         <tr>
                             <td class="title">
@@ -552,8 +487,7 @@
                                 <a href="">皮肤科</a>
                                 <a href="">肿瘤科</a>
                                 <a href="">耳鼻喉科</a>
-                                <a href="">特色医院</a>
-                                <a href="">更多</a>
+                                <a href="./hostipal.html">更多</a>
                             </td>
                         </tr>
                         <tr>
@@ -626,22 +560,6 @@
                             </td>
                         </tr>
                     </table>
-                    <div style="padding-top: 20px">
-                        <span class="petr_hy_nall">上海长海医院</span>
-                        <span class="petr_hy_nall">上海长海医院</span>
-                        <span class="petr_hy_nall">上海长海医院</span>
-                        <span class="petr_hy_nall">上海长海医院</span>
-                        <span class="petr_hy_nall">上海长海医院</span>
-                        <span class="petr_hy_nall">上海长海医院</span>
-                        <span class="petr_hy_nall">上海长海医院</span>
-                        <span class="petr_hy_nall">上海长海医院</span>
-                        <span class="petr_hy_nall">上海长海医院</span>
-                        <span class="petr_hy_nall">上海长海医院</span>
-                        <span class="petr_hy_nall">上海儿童医学中心</span>
-                        <span class="petr_hy_nall">复旦大学附属妇产科医院</span>
-                        <span class="petr_hy_nall">上海中医药大学附属曙光医院</span>
-                        <span class="petr_hy_nall">上海中医药大学附属龙华医院</span>
-                    </div>
                 </div>
             </div>
 
@@ -664,7 +582,7 @@
                                 <a href="">肿瘤科</a>
                                 <a href="">耳鼻喉科</a>
                                 <a href="">特色医院</a>
-                                <a href="">更多</a>
+                                <a href="./keshi.html">更多</a>
                             </td>
                         </tr>
                         <tr>
