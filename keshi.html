@@ -30,7 +30,7 @@
         }
        .ui-ul{
            height:auto;
-           padding-top: 50px;
+           /*padding-top: 50px;*/
            white-space:nowrap;
         }
         .ui-ul li{
@@ -54,7 +54,7 @@
         </a>
         <!--logo结束-->
         <!--头部右部开始-->
-        <div class="header_right block" id="categort">
+       <!-- <div class="header_right block" id="categort">
             <div class="toplocation" style="padding-top: 15px;padding-left: 5px">
                 <img src="./images/icon/icon1.png" alt="" width="30" height="30" />
                 <span>
@@ -161,7 +161,7 @@
                 <div class="clear"></div>
             </div>
 
-        </div>
+        </div>-->
 
         <!--微博微信开始-->
         <div class="header_wbwx fr">
@@ -198,7 +198,7 @@
                             </li>
                         </ol>
                         <!-- 个人 -->
-                        <ol class="widget-list" id="designers">
+                      <!--  <ol class="widget-list" id="designers">
                             <li>
                                 <form class="theme-signin" name="loginform" action="" method="post">
                                     <ol>
@@ -219,7 +219,7 @@
                         <ul class="widget-tabs">
                             <li class="widget-tab"><a href="#managers" class="widget-tab-link">企业会员</a></li>
                             <li class="widget-tab"><a href="#designers" class="widget-tab-link">个人会员</a></li>
-                        </ul>
+                        </ul>-->
                     </div>
                 </div>
             </div>
@@ -245,42 +245,36 @@
 
         <div class="sectionbox">
             <div class="tabs">
-                <span class="tips">按疾病找医生</span>
-                <input type="hidden" value="2/上海/all/不限" class="area-suffix">
+                <span class="tips">按科室找医生</span>
+                <input type="hidden" value="" class="area-suffix">
                 <ul class="season-to-doctor-nav J_seasonNav" style="margin-left: 120px;">
-                    <li class="season-disease on" data-url=""
-                        data-type="season-disease" style="width: 98px;">
-                        <a>季节性疾病</a>
+                    <li class="season-disease on" style="width: 98px;"><a target="_blank" href="">呼吸内科</a>
                         <span></span>
                     </li>
-                    <li data-type="neike" style="width: 56px;" class="">
-                        <a target="_blank" href="">内科</a>
+                    <li data-type="neike" style="width: 98px;" class=""><a target="_blank" href="">消化内科</a>
                         <span></span>
                     </li>
-                    <li data-type="waike" style="width: 56px;" class="">
-                        <a target="_blank" href="">外科</a>
+                    <li data-type="waike" style="width: 98px;" class=""><a target="_blank" href="">消化内科</a>
                         <span></span>
                     </li>
-                    <li data-type="fuchanke" style="width: 70px;" class="">
-                        <a target="_blank" href="">妇产科</a>
+                    <li data-type="fuchanke" style="width: 98px;" class=""><a target="_blank" href="">神经内科</a>
                         <span></span>
                     </li>
-                    <li data-type="pifuke" style="width: 70px;" class="">
-                        <a target="_blank" href="">皮肤科</a>
+                    <li data-type="pifuke" style="width: 98px;" class=""><a target="_blank" href="">神经外科</a>
                         <span></span>
                     </li>
-                    <li data-type="guke" style="width: 56px;" class="">
-                        <a target="_blank" href="">骨科</a>
+                    <li data-type="guke" style="width: 98px;" class=""><a target="_blank" href="">肝胆外科</a>
                         <span></span>
                     </li>
-                    <li data-type="wuguanke" style="width: 98px;" class="">
-                        <a target="_blank" href="">耳鼻咽喉科</a>
+                    <li data-type="wuguanke" style="width: 98px;" class=""><a target="_blank" href="">耳鼻咽喉科</a>
                         <span></span>
                     </li>
-                    <li data-type="erke" style="width: 56px;" class="">
-                        <a target="_blank" href="">儿科</a>
+                    <li data-type="erke" style="width: 56px;" class=""><a target="_blank" href="">骨科</a>
                         <span></span>
                     </li>
+                    <li data-type="guke" style="width: 78px;" class=""><a target="_blank" href="">烧伤科</a>
+                    <span></span>
+                </li>
                 </ul>
             </div>
             <div class="season-container J_seasonContainer">
@@ -313,73 +307,85 @@
                         <a target="_blank" href="">肩周炎</a>
                     </li>
                     <li>
+                    <a target="_blank" href="">皮肤病</a>
+                </li>
+                    <li>
+                        <a target="_blank" href="">腮腺炎</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="">高血压</a>
+                    </li>
+                    <li>
                         <a target="_blank" href="">皮肤病</a>
                     </li>
                     <li>
                         <a target="_blank" href="">腮腺炎</a>
                     </li>
+                    <li>
+                        <a target="_blank" href="">高血压</a>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <div class="sectionbox1">
-            <div class="tabs">
-                <span class="tip">按人群找医生</span>
-                <ul class="people-to-doctor-nav J_peopleNav">
-                    <li data-type="nvxing" class="" style="width: 56px;">
-                        <a>女性</a>
-                        <span></span>
-                    </li>
-                    <li data-type="nanxing" style="width: 56px;" class="">
-                        <a>男性</a>
-                        <span></span>
-                    </li>
-                    <li data-type="ertong" style="width: 56px;" class="">
-                        <a>儿童</a>
-                        <span></span>
-                    </li>
-                    <li data-type="yunchanfu" style="width: 70px;" class="">
-                        <a>孕产妇</a>
-                        <span></span>
-                    </li>
-                    <li data-type="yingyouer" style="width: 70px;" class="">
-                        <a>婴幼儿</a>
-                        <span></span>
-                    </li>
-                    <li data-type="zhonglaonian" style="width: 70px;" class="on">
-                        <a>中老年</a>
-                        <span></span>
-                    </li>
-                    <li data-type="shangbanzu" style="width: 70px;" class="">
-                        <a>上班族</a>
-                        <span></span>
-                    </li>
-                </ul>
-            </div>
-            <div class="people-container1 J_peopleContainer">
-                <ul class="zhonglaonian" style="display: block;">
-                    <li><a target="_blank" href="">白内障</a></li>
-                    <li><a target="_blank" href="">糖尿病</a></li>
-                    <li><a target="_blank" href="">老年痴呆</a></li>
-                    <li><a target="_blank" href="">骨质增生</a></li>
-                    <li><a target="_blank" href="">骨质疏松</a></li>
-                    <li><a target="_blank" href="">老年斑</a></li>
-                    <li><a target="_blank" href="">腰椎间盘突出</a></li>
-                    <li><a target="_blank" href="">疝气</a></li>
-                    <li><a target="_blank" href="">老花眼</a></li>
-                    <li><a target="_blank" href="">老年肠梗阻</a></li>
-                    <li><a target="_blank" href="">阿尔兹海默病</a></li>
-                </ul>
-            </div>
+       <!-- <div class="sectionbox1">
+        <div class="tabs">
+            <span class="tip">按人群找医生</span>
+            <ul class="people-to-doctor-nav J_peopleNav">
+                <li data-type="nvxing" class="" style="width: 56px;">
+                    <a>女性</a>
+                    <span></span>
+                </li>
+                <li data-type="nanxing" style="width: 56px;" class="">
+                    <a>男性</a>
+                    <span></span>
+                </li>
+                <li data-type="ertong" style="width: 56px;" class="">
+                    <a>儿童</a>
+                    <span></span>
+                </li>
+                <li data-type="yunchanfu" style="width: 70px;" class="">
+                    <a>孕产妇</a>
+                    <span></span>
+                </li>
+                <li data-type="yingyouer" style="width: 70px;" class="">
+                    <a>婴幼儿</a>
+                    <span></span>
+                </li>
+                <li data-type="zhonglaonian" style="width: 70px;" class="on">
+                    <a>中老年</a>
+                    <span></span>
+                </li>
+                <li data-type="shangbanzu" style="width: 70px;" class="">
+                    <a>上班族</a>
+                    <span></span>
+                </li>
+            </ul>
         </div>
+        <div class="people-container1 J_peopleContainer">
+            <ul class="zhonglaonian" style="display: block;">
+                <li><a target="_blank" href="">白内障</a></li>
+                <li><a target="_blank" href="">糖尿病</a></li>
+                <li><a target="_blank" href="">老年痴呆</a></li>
+                <li><a target="_blank" href="">骨质增生</a></li>
+                <li><a target="_blank" href="">骨质疏松</a></li>
+                <li><a target="_blank" href="">老年斑</a></li>
+                <li><a target="_blank" href="">腰椎间盘突出</a></li>
+                <li><a target="_blank" href="">疝气</a></li>
+                <li><a target="_blank" href="">老花眼</a></li>
+                <li><a target="_blank" href="">老年肠梗阻</a></li>
+                <li><a target="_blank" href="">阿尔兹海默病</a></li>
+            </ul>
+        </div>
+    </div>-->
 
-        <div class="xiweizhongxi_left fl sectionbox2">
-            <div class="title-bar">
+        <div class="xiweizhongxi_left fl sectionbox2" style="margin-top: 220px">
+         <!--   <div class="title-bar">
                 <h2>在线问诊</h2>
                 <span class="slogan">
                     足不出户看医生（平台的问诊费由医生自行设定，平台不收取任何额外费用）
                 </span>
-            </div>
+            </div>-->
             <div class="consult-bar">
                 <div class="consult-fm">
                     <form class="J_FreeConsult" action="" method="get" target="_blank">
@@ -393,7 +399,7 @@
                 </div>
             </div>
             <div class="consult-list J_ConsultList" data-tab-url="">
-                <div class="tabs">
+            <!--    <div class="tabs">
                     <ul class="g-clear J_Nav">
                         <li data-id="11" class="on" style="width: 76px;"><a>妇产科</a></li>
                         <li data-id="12" style="width: 62px;" class=""><a>儿科</a></li>
@@ -404,7 +410,7 @@
                         <li data-id="17" style="width: 62px;" class=""><a>骨科</a></li>
                         <li data-id="18" style="width: 132px;" class=""><a>耳鼻咽喉头颈科</a></li>
                     </ul>
-                </div>
+                </div>-->
                 <div class="grid" >
                     <ul class="ui-ul">
                         <li >
@@ -432,24 +438,7 @@
                                     颈椎病、腰椎间盘突出症、腰椎滑脱症、椎管狭窄症、...
                                 </p>
 
-                                <div class="doctor-service">
-                                    <a class="infos image" href="" monitor="home,doctor,picask"
-                                       monitor-doctor-id="138181403958522000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-                                            <em>图文问诊</em>
-                                            <em class="price">￥100</em>
-                                        </span>
-                                    </a>
-                                    <a class="infos video" href="" monitor="ask,doctor,vpask"
-                                       monitor-doctor-id="138181403958522000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-                                            <em>视话问诊</em>
-                                            <em>暂无排班</em>
-                                        </span>
-                                    </a>
-                                </div>
+
                             </div>
                         </li>
                         <li>
@@ -467,33 +456,14 @@
                                     <span class="more-dot"></span>
                                 </p>
                                 <p class="doctor-consult">
-			<span class="star">评分
-				<em>9.2</em></span>
+                                <span class="star">评分
+                                    <em>9.2</em></span>
                                     <span>问诊量 <i>57</i></span>
                                 </p>
 
                                 <p class="doctor-good">擅长：
                                     手麻肌肉萎缩周围神经卡压性疾病（腕管综合征肘管综...
                                 </p>
-
-                                <div class="doctor-service">
-                                    <a class="infos image" href="" monitor="home,doctor,picask"
-                                       monitor-doctor-id="129256436305243000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>图文问诊</em>
-					<em class="price">
-						￥280</em>
-				</span>
-                                    </a>
-                                    <a class="infos video disabled" href="javascript:;">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>视话问诊</em>
-					<em>未开通</em>
-				</span>
-                                    </a>
-                                </div>
                             </div>
                         </li>
                         <li>
@@ -521,24 +491,6 @@
                                     颈椎病、腰椎间盘突出症、腰椎滑脱症、椎管狭窄症、...
                                 </p>
 
-                                <div class="doctor-service">
-                                    <a class="infos image" href="" monitor="home,doctor,picask"
-                                       monitor-doctor-id="138181403958522000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-                                            <em>图文问诊</em>
-                                            <em class="price">￥100</em>
-                                        </span>
-                                    </a>
-                                    <a class="infos video" href="" monitor="ask,doctor,vpask"
-                                       monitor-doctor-id="138181403958522000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-                                            <em>视话问诊</em>
-                                            <em>暂无排班</em>
-                                        </span>
-                                    </a>
-                                </div>
                             </div>
                         </li>
                         <li>
@@ -556,33 +508,14 @@
                                     <span class="more-dot"></span>
                                 </p>
                                 <p class="doctor-consult">
-			<span class="star">评分
-				<em>9.2</em></span>
+                                <span class="star">评分
+                                    <em>9.2</em></span>
                                     <span>问诊量 <i>57</i></span>
                                 </p>
 
                                 <p class="doctor-good">擅长：
                                     手麻肌肉萎缩周围神经卡压性疾病（腕管综合征肘管综...
                                 </p>
-
-                                <div class="doctor-service">
-                                    <a class="infos image" href="" monitor="home,doctor,picask"
-                                       monitor-doctor-id="129256436305243000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>图文问诊</em>
-					<em class="price">
-						￥280</em>
-				</span>
-                                    </a>
-                                    <a class="infos video disabled" href="javascript:;">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>视话问诊</em>
-					<em>未开通</em>
-				</span>
-                                    </a>
-                                </div>
                             </div>
                         </li>
                         <li>
@@ -609,25 +542,6 @@
                             <p class="doctor-good">擅长：
                                 颈椎病、腰椎间盘突出症、腰椎滑脱症、椎管狭窄症、...
                             </p>
-
-                            <div class="doctor-service">
-                                <a class="infos image" href="" monitor="home,doctor,picask"
-                                   monitor-doctor-id="138181403958522000" target="_blank">
-                                    <i></i>
-                                    <span class="service-name">
-                                            <em>图文问诊</em>
-                                            <em class="price">￥100</em>
-                                        </span>
-                                </a>
-                                <a class="infos video" href="" monitor="ask,doctor,vpask"
-                                   monitor-doctor-id="138181403958522000" target="_blank">
-                                    <i></i>
-                                    <span class="service-name">
-                                            <em>视话问诊</em>
-                                            <em>暂无排班</em>
-                                        </span>
-                                </a>
-                            </div>
                         </div>
                     </li>
                         <li>
@@ -645,33 +559,14 @@
                                     <span class="more-dot"></span>
                                 </p>
                                 <p class="doctor-consult">
-			<span class="star">评分
-				<em>9.2</em></span>
+                                <span class="star">评分
+                                    <em>9.2</em></span>
                                     <span>问诊量 <i>57</i></span>
                                 </p>
 
                                 <p class="doctor-good">擅长：
                                     手麻肌肉萎缩周围神经卡压性疾病（腕管综合征肘管综...
                                 </p>
-
-                                <div class="doctor-service">
-                                    <a class="infos image" href="" monitor="home,doctor,picask"
-                                       monitor-doctor-id="129256436305243000" target="_blank">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>图文问诊</em>
-					<em class="price">
-						￥280</em>
-				</span>
-                                    </a>
-                                    <a class="infos video disabled" href="javascript:;">
-                                        <i></i>
-                                        <span class="service-name">
-					<em>视话问诊</em>
-					<em>未开通</em>
-				</span>
-                                    </a>
-                                </div>
                             </div>
                         </li>
                     </ul>
@@ -680,96 +575,68 @@
         </div>
 
         <!--右侧开始-->
-        <div class="focus-cnpc fr block" style="margin-top: 20px;margin-bottom: 515px" >
-            <div class="zszb space">
-                <div class="tab-head clearfix">
+        <div class="focus-cnpc fr block" style="margin-top: 220px;" >
+            <div class="list_charts">
+                <h1 class="tit_top"></h1>
+                <div class="charts_con ph_con">
                     <ul>
-                        <li id="ggtit3" class="undefined"><span class="f14 b">停诊公告</span></li>
+                        <li>
+                            <a href="" target="_blank" title="正值春季该如何进补 食补和药补都挺不错">正值春季该如何进补 食补和药补都挺不错</a>
+                        </li>
+
                     </ul>
                 </div>
-                <div class="tab-content">
-                    <div id="tab-content0" style="display: block;">
-                        <div class="zszblist" id="tennews">
-                            <ul>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                                <li class="newlist">
-                                    <a href="" target="_blank" title="中国石油全力战“疫”管网安全平稳运行"> 中国石油全力战“疫”管网安全平稳运行
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
+            <div class="list_charts">
+                <h1 class="tit_com"></h1>
+                    <div class="rec_top cc">
+                        <p class="btitle">
+                            <a href="" title="正值春季该如何进补 食补和药补都挺不错" target="_blank">
+                                正值春季该如何进补 食补和药补</a>
+                        </p>
+                        <p class="bdetail">
+                            根据中医的说法，春天是肝旺之时，是进补的好时机，那么正值春季…
+                            <a href="" target="_blank">[详细]</a>
+                        </p>
 
-            <div class="zszb space">
+                    </div>
+                    <div class="rec_bottom">
+                        <ul>
+                            <li><a href=""
+                                   title="糖尿病的症状有哪些 患者日常生活要注意什么" target="_blank">糖尿病的症状有哪些 患者日常生活要注</a>
+                            </li>
+                            <li><a href=""
+                                   title="导致眼睛干涩的原因有哪些 眼睛干涩怎么办" target="_blank">导致眼睛干涩的原因有哪些 眼睛干涩怎</a>
+                            </li>
+                            <li><a href=""
+                                   title="疫情期间糖尿病患者应该注意哪些问题" target="_blank">疫情期间糖尿病患者应该注意哪些问题</a>
+                            </li>
+                            <li><a href=""
+                                   title="女性肝火旺的症状有哪些 该如何缓解" target="_blank">女性肝火旺的症状有哪些 该如何缓解</a>
+                            </li>
+                            <li><a href=""
+                                   title="拔智齿能瘦脸吗 哪些智齿建议拔除" target="_blank">拔智齿能瘦脸吗 哪些智齿建议拔除</a>
+                            </li>
+                            <li><a href=""
+                                   title="糖尿病的症状有哪些 患者日常生活要注意什么" target="_blank">糖尿病的症状有哪些 患者日常生活要注</a>
+                            </li>
+                            <li><a href=""
+                                   title="导致眼睛干涩的原因有哪些 眼睛干涩怎么办" target="_blank">导致眼睛干涩的原因有哪些 眼睛干涩怎</a>
+                            </li>
+                            <li><a href=""
+                                   title="疫情期间糖尿病患者应该注意哪些问题" target="_blank">疫情期间糖尿病患者应该注意哪些问题</a>
+                            </li>
+                            <li><a href=""
+                                   title="女性肝火旺的症状有哪些 该如何缓解" target="_blank">女性肝火旺的症状有哪些 该如何缓解</a>
+                            </li>
+                            <li><a href=""
+                                   title="拔智齿能瘦脸吗 哪些智齿建议拔除" target="_blank">拔智齿能瘦脸吗 哪些智齿建议拔除</a>
+                            </li>
+
+                        </ul>
+                    </div>
+            </div>
+            <!--<div class="zszb space">
                 <div class="tab-head clearfix">
                     <ul>
                         <li id="ggtit2" class="undefined"><span class="f14 b">医院咨询</span></li>
@@ -855,7 +722,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
 
         <!--右侧结束-->

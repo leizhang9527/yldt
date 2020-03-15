@@ -292,7 +292,12 @@ body {
     width: 1004px;
     margin-left: auto;
     margin-right: auto;
+	margin-bottom: 10px;
     background-color: #fff;
+}
+.help_01{
+	margin-left: 60px;
+	margin-right: 60px;
 }
 .search_title {
     padding: 35px 0 15px 0;
@@ -300,7 +305,6 @@ body {
     border-bottom: 1px solid #EDEDED;
     font-size: 18px;
     font-weight: normal;
-    font-family: "微软雅黑";
 }
 .hd01 {
     height: 20px;
@@ -309,7 +313,8 @@ body {
     border-bottom: 1px solid #EDEDED;
     font-size: 20px;
     padding-bottom: 8px;
-    margin-left: 12px;
+	margin-left: 60px;
+	margin-right: 60px;
 }
 .fwr {
     font-family: "微软雅黑";
@@ -1228,6 +1233,7 @@ body {
 	/* 清除浮动元素格式 */
 	position: relative;
 	margin: 0 auto;
+	margin-top: 35px;
    z-index: 2;
 	/* Footer 高度的负值 */
 }
@@ -1236,6 +1242,7 @@ body {
 	margin: 0 auto;
 	width: 1004px;
 	height: 224px;
+	display: none;
 	position: relative;
 	border-top: 2px solid #ddd;
 }
@@ -1332,12 +1339,11 @@ body {
 }
 
 .bomfot {
-	margin: 5px auto 0;
 	width: 1004px;
 	text-align: center;
 	color: #434343;
 	padding: 32px 0 26px;
-	background-color: #cccccc;
+	background-color: #ffffff;
 }
 
 .bomfot p {
